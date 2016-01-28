@@ -1,0 +1,11 @@
+{
+  "request_id": 123456,
+  "parameters": {
+    "api_key": "secret",
+    "access_token": "verysecret"
+  },
+  "contact": {
+    "id": "12836",
+    "email": "spree@example.com"
+  }
+}
