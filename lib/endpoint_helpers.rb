@@ -14,9 +14,8 @@ module EndpointHelpers
     begin
       yield
     rescue Hubspot::RequestError => e
-      puts e.message
-      if e.message.include? "Contact already exists"
-        result 200, e.message
+      if e.message.include? "Contact already exists" && e.message.include? "CONTACT_EXISTS"
+        result 200, "Contact already exists"
       else
         result 500, e.message        
       end
