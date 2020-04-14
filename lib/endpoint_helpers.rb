@@ -15,7 +15,7 @@ module EndpointHelpers
       yield
     rescue Hubspot::RequestError => e
       if e.message.include? "Contact already exists" 
-        failure_message = {"customer" => { "id" => @id, "is_existing_customer" => true }}
+        failure_message = `{"customer" => { "id" => #{@id}, "is_existing_customer" => true }}`
 
         puts "FAIL FAIL FAIL FAIL FAIL FAIL FAIL FAIL FAIL FAIL FAIL FAIL "
         puts failure_message
