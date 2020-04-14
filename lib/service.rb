@@ -7,6 +7,9 @@ class Service
   private
 
   def contact
+    puts "---------------------"
+    puts @payload
+    puts "---------------------"
     @payload['contact']
   end
 
