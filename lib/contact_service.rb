@@ -8,8 +8,8 @@ class ContactService < Service
   end
 
   def update!
-    @contact = Hubspot::Contact.find_by_email(contact[:email])
-    @contact.update!(contact)
+    @contact = Hubspot::Contact.find_by_email(@payload["email"])
+    @contact.update!(@payload.reject { |k,v| k == "id" })
 
     @contact.to_json
   end
