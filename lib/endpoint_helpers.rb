@@ -1,7 +1,8 @@
 module EndpointHelpers
 
   def add_contact
-    message = ContactService.new(@payload, @config)
+    message = ContactService.new(@payload["contact"].delete("id"), @config)
+    puts @payload
     message.add!
   end
 
@@ -15,7 +16,7 @@ module EndpointHelpers
       yield
     rescue Hubspot::RequestError => e
       if e.message.include? "Contact already exists" # && e.message.include? "CONTACT_EXISTS"
-        result 200, "Contact already exists"
+        result 500, '{ "customer": { "id": @id, "is_existing_customer": true } }'
       else
         result 500, e.message        
       end
