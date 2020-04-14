@@ -1,7 +1,8 @@
 class ContactService < Service
 
   def add!
-    @contact = Hubspot::Contact.create!(contact["email"], contact)
+    contact
+    @contact = Hubspot::Contact.create!(contact[:email], contact)
 
     @contact.to_json
   end
