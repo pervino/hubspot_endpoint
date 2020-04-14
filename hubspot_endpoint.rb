@@ -21,7 +21,7 @@ class HubspotEndpoint < EndpointBase::Sinatra::Base
     @id = @payload["contact"]["id"]
     process_request do
       add_contact
-      result 200, '{ "customer": { "id": @id, "is_existing_customer": true } }'
+      result 200, { "customer": { "id": @id, "is_existing_customer": true } }
     end
   end
 
