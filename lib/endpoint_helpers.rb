@@ -1,7 +1,7 @@
 module EndpointHelpers
 
   def add_contact
-    message = ContactService.new(@payload["contact"].delete("id"), @config)
+    message = ContactService.new(@payload["contact"], @config)
     puts @payload
     message.add!
   end
