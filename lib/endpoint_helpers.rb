@@ -18,7 +18,8 @@ module EndpointHelpers
         puts "FAIL FAIL FAIL FAIL FAIL FAIL FAIL FAIL FAIL FAIL FAIL FAIL "
         puts "customer": { "id": @id, "is_existing_customer": true }
         puts "FAIL FAIL FAIL FAIL FAIL FAIL FAIL FAIL FAIL FAIL FAIL FAIL "
-        result 500, "customer": { "id": @id, "is_existing_customer": true }
+        # result 500, "customer": { "id": @id, "is_existing_customer": true }
+        result 500, "cheese"
       else
         result 500, e.message        
       end
