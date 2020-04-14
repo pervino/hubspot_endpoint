@@ -7,7 +7,7 @@ class Service
   private
 
   def contact
-    @payload['contact']
+    return @payload['contact']
   end
 
   def authenticate
