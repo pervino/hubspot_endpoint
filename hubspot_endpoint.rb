@@ -22,9 +22,6 @@ class HubspotEndpoint < EndpointBase::Sinatra::Base
     process_request do
       add_contact
       result 200, { "customer": { "id": @id, "is_existing_customer": true } }
-      puts "SUCCESS SUCCESS SUCCESS SUCCESS SUCCESS SUCCESS SUCCESS SUCCESS SUCCESS SUCCESS SUCCESS SUCCESS "
-      puts "SUCCESS SUCCESS SUCCESS SUCCESS SUCCESS SUCCESS SUCCESS SUCCESS SUCCESS SUCCESS SUCCESS SUCCESS "
-      puts "SUCCESS SUCCESS SUCCESS SUCCESS SUCCESS SUCCESS SUCCESS SUCCESS SUCCESS SUCCESS SUCCESS SUCCESS "
     end
   end
 
