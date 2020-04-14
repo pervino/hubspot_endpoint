@@ -7,7 +7,7 @@ class ContactService < Service
     puts " !!!!!!!!! !!!!!!! !!!!!!!!!"
     puts @payload
     puts " !!!!!!!!! !!!!!!! !!!!!!!!!"
-    @contact = Hubspot::Contact.create!(@payload["contact"]["email"], @payload["contact"])
+    @contact = Hubspot::Contact.create!(@payload["email"], @payload)
 
     @contact.to_json
   end
