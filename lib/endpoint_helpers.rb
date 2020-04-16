@@ -6,7 +6,8 @@ module EndpointHelpers
   end
 
   def update_contact
-    message = ContactService.new(@payload, @config)
+    puts @payload
+    message = ContactService.new(@payload["contact"], @config)
     message.update!
   end
 
