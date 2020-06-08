@@ -7,11 +7,7 @@ module EndpointHelpers
 
   def update_contact
     message = ContactService.new(@payload["contact"], @config)
-    if message == nil
-      message.add!
-    else
-      message.update!
-    end
+    message.update!
   end
 
   def process_request

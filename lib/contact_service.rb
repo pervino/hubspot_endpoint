@@ -9,7 +9,13 @@ class ContactService < Service
 
   def update!
     @contact = Hubspot::Contact.find_by_email(@payload["email"])
-    @contact.update!(@payload.reject { |k,v| k == "id" })
+
+    # if customer has changed their email, we'll just make a new contact
+    if @contact == nil
+      @contact = Hubspot::Contact.create!(@payload["email"], @payload.reject { |k,v| k == "id" })
+    else
+      @contact.update!(@payload.reject { |k,v| k == "id" })
+    end
 
     @contact.to_json
   end
