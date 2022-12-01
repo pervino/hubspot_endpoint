@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/spree/endpoint_base.git
+  remote: https://github.com/spree/endpoint_base.git
   revision: b3077af5b54ba18ed47bdbef01395b0027ad6637
   specs:
     endpoint_base (0.3)
@@ -34,7 +34,7 @@ GEM
       concurrent-ruby (~> 1.0)
     jbuilder (2.10.0)
       activesupport (>= 5.0.0)
-    json (2.3.0)
+    json (2.6.2)
     kgio (2.11.3)
     method_source (0.9.2)
     mime-types (3.3.1)
@@ -42,14 +42,14 @@ GEM
     mime-types-data (3.2019.1009)
     minitest (5.14.0)
     multi_xml (0.6.0)
-    mustermann (1.1.1)
+    mustermann (2.0.2)
       ruby2_keywords (~> 0.0.1)
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
     public_suffix (4.0.3)
-    rack (2.2.2)
-    rack-protection (2.0.8.1)
+    rack (2.2.4)
+    rack-protection (2.2.3)
       rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -67,12 +67,12 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.9.0)
     rspec-support (3.9.2)
-    ruby2_keywords (0.0.2)
+    ruby2_keywords (0.0.5)
     safe_yaml (1.0.5)
-    sinatra (2.0.8.1)
-      mustermann (~> 1.0)
-      rack (~> 2.0)
-      rack-protection (= 2.0.8.1)
+    sinatra (2.2.3)
+      mustermann (~> 2.0)
+      rack (~> 2.2)
+      rack-protection (= 2.2.3)
       tilt (~> 2.0)
     thread_safe (0.3.6)
     tilt (2.0.10)
